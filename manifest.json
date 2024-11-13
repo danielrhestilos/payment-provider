@@ -1,7 +1,7 @@
 {
   "name": "payment-provider-example",
   "vendor": "estilospe",
-  "version": "1.2.0",
+  "version": "0.0.0",
   "title": "Payment Provider Example",
   "description": "Reference app for Payment-Provider protocol implementers",
   "builders": {
