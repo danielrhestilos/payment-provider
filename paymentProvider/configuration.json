@@ -14,6 +14,15 @@
       "allowsSplit": "onCapture"
     },
     {
+      "name": "TestSuitApprover",
+      "allowsSplit": "onCapture"
+    },
+    {
+      "name": "TestSuitApproverNbz",
+      "allowsSplit": "onCapture"
+    },
+
+    {
       "name": "Elo",
       "allowsSplit": "onCapture"
     },
