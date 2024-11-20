@@ -1,14 +1,9 @@
 import axios from "axios";
 import { AuthorizationRequest, AuthorizationResponse, CancellationRequest, CancellationResponse, InboundRequest, InboundResponse, PaymentProvider, RefundRequest, RefundResponse, SettlementRequest, SettlementResponse } from "@vtex/payment-provider";
-
+// import {CancellationRequest, CancellationResponse, InboundRequest, InboundResponse, PaymentProvider, RefundRequest, RefundResponse, SettlementRequest, SettlementResponse } from "@vtex/payment-provider";
 
 export default class MyPaymentConnector extends PaymentProvider {
 
-// authorize(authorization: AuthorizationRequest): Promise<AuthorizationResponse> {
-//     console.log(authorization);
-    
-//     throw new Error("Method not implemented.");
-// }
 refund(refund: RefundRequest): Promise<RefundResponse> {
     console.log(refund);
     
