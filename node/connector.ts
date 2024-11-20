@@ -49,6 +49,8 @@ export default class TestSuiteApprover extends PaymentProvider {
   public async authorize(
     authorization: AuthorizationRequest
   ): Promise<AuthorizationResponse> {
+    console.log("authorization :",authorization);
+    
     if (this.isTestSuite) {
       const persistedResponse = await getPersistedAuthorizationResponse(
         this.context.clients.vbase,

@@ -4,11 +4,11 @@ import { AuthorizationRequest, AuthorizationResponse, CancellationRequest, Cance
 
 export default class MyPaymentConnector extends PaymentProvider {
 
-authorize(authorization: AuthorizationRequest): Promise<AuthorizationResponse> {
-    console.log(authorization);
+// authorize(authorization: AuthorizationRequest): Promise<AuthorizationResponse> {
+//     console.log(authorization);
     
-    throw new Error("Method not implemented.");
-}
+//     throw new Error("Method not implemented.");
+// }
 refund(refund: RefundRequest): Promise<RefundResponse> {
     console.log(refund);
     
@@ -44,5 +44,38 @@ async cancel(cancellation: CancellationRequest): Promise<CancellationResponse> {
         } catch (error) {
            throw new Error(error.message || '');
         }
+    }     
+
+    async authorize(authorization: AuthorizationRequest): Promise<AuthorizationResponse> {
+        console.log("authorization:",authorization);
+        
+        // const options = {
+        //     headers: {
+        //         'X-VTEX-Use-Https': true                
+        //       }
+        //     };
+          try {            
+            // const req :any= await axios.get('http://emojihub.yurace.pro/api/random', options);
+            //Dummy response
+            const response: any  = {
+                // message: req.status.toString() || '',
+
+
+                code: 'cancel-manually',
+                authorizationId: authorization.paymentId,
+                tid:"",
+                nsu:undefined
+
+            }
+            return response;      
+        } catch (error) {
+           throw new Error(error.message || '');
+        }
        }
+    
+
 }
+
+
+
+
